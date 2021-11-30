@@ -12,6 +12,21 @@ public class Vending {
         while(!end) {
             System.out.println("Please put your coin(1/5/10):  Total:" + total);
             String s = scanner.next();
+            switch (s) {
+                case "1":
+                case "5":
+                case "10":
+                    int n = Integer.parseInt(s);
+//                    total = total + n;
+                    total+=n;
+                    int i = 0;
+//                    i=i+1;
+                    i++;
+                    break;
+
+            }
+
+            /*
             try {
                 int num = Integer.parseInt(s);
                 switch (num) {
@@ -38,6 +53,7 @@ public class Vending {
                     }
                 }
             }
+            */
 
         }
         System.out.println("END");
