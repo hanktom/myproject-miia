@@ -3,9 +3,19 @@ package com.tom;
 import java.util.Scanner;
 
 public class Vending {
+    //Drink a) 15
+    //Drink b) 25
+    //Drink c) 20
     public static void main(String[] args) {
         int aPrice = 15;
         int bPrice = 25;
+        int cPrice = 20;
+        int[] prices = {15, 25, 20};
+        System.out.println(prices.length);
+        for (int i=0; i<prices.length; i++) {
+            System.out.println(prices[i]);
+        }
+
         Scanner scanner = new Scanner(System.in);
         int total = 0;
         boolean end = false;
@@ -23,7 +33,35 @@ public class Vending {
 //                    i=i+1;
                     i++;
                     break;
-
+                case "0":
+                    break;
+                case "a":
+                    if (total >= aPrice) {
+                        System.out.println("DON!");
+                        total-=aPrice;
+                    } else {
+                        System.out.println("BEEP!");
+                    }
+                    break;
+                case "b":
+                    if (total >= bPrice) {
+                        System.out.println("DON!");
+                        total-=bPrice;
+                    } else {
+                        System.out.println("BEEP!");
+                    }
+                    break;
+                case "c":
+                    if (total >= cPrice) {
+                        System.out.println("DON!");
+                        total-=cPrice;
+                    } else {
+                        System.out.println("BEEP!");
+                    }
+                    break;
+                default:
+                    System.out.println("Wrong answer!");
+                    break;
             }
 
             /*
