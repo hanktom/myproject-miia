@@ -7,10 +7,7 @@ public class Vending {
     //Drink b) 25
     //Drink c) 20
     public static void main(String[] args) {
-        int aPrice = 15;
-        int bPrice = 25;
-        int cPrice = 20;
-        int[] prices = {15, 25, 20};
+        int[] prices = {15, 25, 20, 22, 18};
         System.out.println(prices.length);
         for (int i=0; i<prices.length; i++) {
             System.out.println(prices[i]);
@@ -36,25 +33,15 @@ public class Vending {
                 case "0":
                     break;
                 case "a":
-                    if (total >= aPrice) {
-                        System.out.println("DON!");
-                        total-=aPrice;
-                    } else {
-                        System.out.println("BEEP!");
-                    }
-                    break;
                 case "b":
-                    if (total >= bPrice) {
-                        System.out.println("DON!");
-                        total-=bPrice;
-                    } else {
-                        System.out.println("BEEP!");
-                    }
-                    break;
                 case "c":
-                    if (total >= cPrice) {
+                case "d":
+                case "e":
+                    System.out.println(s.charAt(0)-97);
+                    int index = s.charAt(0) - 97;
+                    if (total >= prices[index]) {
                         System.out.println("DON!");
-                        total-=cPrice;
+                        total-=prices[index];
                     } else {
                         System.out.println("BEEP!");
                     }
