@@ -11,8 +11,15 @@ public class DiceCounter {
             System.out.println(n);
             counters[n-1]++;
         }
+        int max = 0;
+        int point = 0;
         for (int i = 0; i < 6; i++) {
             System.out.println((i+1) + " " + counters[i] + " times");
+            if (counters[i] > max) {
+                max = counters[i];
+                point = i+1;
+            }
         }
+        //System.out.println(point + " " + max + " times");
     }
 }
