@@ -1,13 +1,12 @@
 package com.tom;
 
-import java.util.Random;
-
 public class DiceCounter {
     public static void main(String[] args) {
-        Random random = new Random();
         int[] counters = new int[6];
+        Dice dice = new Dice();
+
         for (int i = 0; i < 10; i++) {
-            int n = random.nextInt(6)+1;
+            int n = dice.roll();
             System.out.println(n);
             counters[n-1]++;
         }
