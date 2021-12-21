@@ -3,12 +3,12 @@ package com.tom;
 public class DiceCounter {
     public static void main(String[] args) {
         int[] counters = new int[6];
-        Dice dice = new Dice();
-
         for (int i = 0; i < 10; i++) {
-            int n = dice.roll();
-            System.out.println(n);
-            counters[n-1]++;
+            Dice dice = new Dice();
+            Dice d2 = new Dice();
+            dice.roll();
+            System.out.println(dice.point);
+            counters[dice.point-1]++;
         }
         int max = 0;
         int point = 0;
