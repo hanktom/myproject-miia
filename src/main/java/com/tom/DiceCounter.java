@@ -7,7 +7,14 @@ public class DiceCounter {
             Dice dice = new Dice();
             Dice d2 = new Dice();
             dice.roll();
-            System.out.println(dice.point);
+            System.out.print(dice.point);
+            String s = dice.isMax() ? "*" : "";
+            System.out.println(s);
+           /* if (dice.isMax()) {
+                System.out.println("*");
+            } else {
+                System.out.println();
+            }*/
             counters[dice.point-1]++;
         }
         int max = 0;
